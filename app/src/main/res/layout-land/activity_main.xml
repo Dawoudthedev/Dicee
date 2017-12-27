@@ -10,24 +10,29 @@
     tools:context=".MainActivity">
 
 
-    -
+
 
     <ImageView
         android:id="@+id/image_logo"
-        android:layout_width="275dp"
-        android:layout_height="126dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
 
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:scaleType="centerInside"
+
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/image_leftDice"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.396"
         app:srcCompat="@drawable/dicee_logo"
-        tools:layout_editor_absoluteX="0dp" />
+        android:contentDescription="@string/Casino_Logo" />
 
 
-    -
+
 
 
     <ImageView
@@ -45,7 +50,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/image_rightDice"
         app:layout_constraintVertical_chainStyle="spread"
-        app:srcCompat="@drawable/dice2" />
+        app:srcCompat="@drawable/dice2"
+        android:contentDescription="@string/Left_Dice_Image" />
 
     <ImageView
         android:id="@+id/image_rightDice"
@@ -56,6 +62,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+
         app:layout_constraintBottom_toTopOf="@+id/image_leftDice"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.571"
@@ -63,39 +70,29 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.444"
         app:layout_constraintVertical_chainStyle="spread"
-        app:srcCompat="@drawable/dice1" />
+        app:srcCompat="@drawable/dice1"
+        android:contentDescription="@string/Right_Dice_Image" />
 
 
-    -
+
 
     <Button
         android:id="@+id/rollButton"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="0dp"
         android:layout_height="49dp"
+
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
-        android:contentDescription="@string/descripton_button"
+        android:contentDescription="@string/description_button"
         android:text="@string/roll_button_text"
         android:textColor="@android:color/background_light"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline_rightLogo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.90" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline_leftLogo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.92" />
 
 
 </android.support.constraint.ConstraintLayout>

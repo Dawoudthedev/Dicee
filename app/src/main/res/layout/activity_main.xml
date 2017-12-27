@@ -77,7 +77,7 @@
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
-        android:contentDescription="@string/descripton_button"
+        android:contentDescription="@string/description_button"
         android:text="@string/roll_button_text"
         android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toBottomOf="parent"
